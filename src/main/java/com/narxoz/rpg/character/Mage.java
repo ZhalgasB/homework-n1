@@ -3,47 +3,45 @@ package com.narxoz.rpg.character;
 import com.narxoz.rpg.equipment.Armor;
 import com.narxoz.rpg.equipment.Weapon;
 
-public class Warrior implements Character {
+public class Mage  implements Character{
 
     private String name;
     private Weapon weapon;
     private Armor armor;
 
-
-    public Warrior(String name) {
+    public Mage(String name) {
         this.name = name;
     }
 
-
-
-
+    @Override
     public String getName() {
         return name;
     }
 
     @Override
     public int getHealth() {
-        return 150;
+        return 70;
     }
 
     @Override
     public int getMana() {
-        return 30;
+        return 200;
     }
 
     @Override
     public int getStrength() {
-        return 80;
+        return 20;
     }
 
     @Override
     public int getIntelligence() {
-        return 20;
+        return 100;
     }
 
-
+    @Override
     public String useSpecialAbility() {
-        return " uses BERSERKER RAGE! Strength temporarily increased!";
+        return "Fire blast!";
     }
+
 
 }
