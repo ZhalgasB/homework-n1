@@ -46,4 +46,30 @@ public class Warrior implements Character {
         return " uses BERSERKER RAGE! Strength temporarily increased!";
     }
 
+    @Override
+    public void equipWeapon(Weapon weapon) {
+        this.weapon =weapon;
+
+    }
+
+    @Override
+    public void equipArmor(Armor armor) {
+        this.armor= armor;
+
+    }
+
+    public String getEquipmentInfo() {
+        String weaponText = "no weapon";
+
+        if (weapon != null){
+            weaponText = weapon.getWeaponInfo();
+        }
+        String armorText = "no armor";
+        if (armor != null){
+            armorText = armor.getArmorInfo();
+        }
+
+        return "Weapon: " + weaponText + "Armor: " + armorText;
+    }
+
 }
